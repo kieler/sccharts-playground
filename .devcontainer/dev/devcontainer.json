@@ -2,9 +2,6 @@
     "build": {
       "dockerfile": "../../dockerfiles/github-codespace.Dockerfile"
     },
-    "hostRequirements": {
-      "cpus": 1
-    },
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
     "postCreateCommand": {
