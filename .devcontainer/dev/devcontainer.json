@@ -13,7 +13,7 @@
     "postCreateCommand": {
       "setup-lf": "bash -i ./.scripts/setup-user-env.bash",
       // && bash ./.scripts/setup-lf.bash dev
-      "setup-examples": "git clone https://github.com/kieler/models.git models --branch main" 
+      "setup-examples": "git clone https://github.com/kieler/models.git models --branch master" 
     }, 
     "workspaceFolder": "/workspaces/sccharts-playground",
     // "remoteEnv": {
