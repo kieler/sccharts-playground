@@ -11,7 +11,7 @@
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
     "postCreateCommand": {
-      "setup-lf": "bash -i ./.scripts/setup-user-env.bash",
+      // "setup-lf": "bash -i ./.scripts/setup-user-env.bash",
       // && bash ./.scripts/setup-lf.bash dev
       "setup-examples": "git clone https://github.com/kieler/models.git models --branch master" 
     }, 
@@ -27,8 +27,8 @@
       },
       "vscode": {
         "extensions": [
-          "kieler.klighd-vscode",
-          "kieler.keith-vscode"
+          "kieler.keith-vscode",
+          "kieler.klighd-vscode"
         ]
       }
     }

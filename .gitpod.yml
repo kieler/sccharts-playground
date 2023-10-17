@@ -9,19 +9,19 @@ tasks:
   #     gp sync-done setup-lf
   #   command: exit
   - name: Setup Example
-    init: git clone https://github.com/kieler/models.git examples --branch master
+    init: git clone https://github.com/kieler/models.git models --branch master
     command: exit
-  - name: Setup Java and node.js for user
-    init: |
-      bash -i ./.scripts/setup-user-env.bash
-      gp sync-done setup-user-env
-    command: exit
-  - name: Notificaton
-    command: |
-      echo -e "\033[0;31mPlease wait while GitPod executes some finishing touch...... \033[0m"
-      gp sync-await setup-user-env
-      \. ~/.bashrc
-      echo "Enjoy!"
+  # - name: Setup Java and node.js for user
+  #   init: |
+  #     bash -i ./.scripts/setup-user-env.bash
+  #     gp sync-done setup-user-env
+  #   command: exit
+  # - name: Notificaton
+  #   command: |
+  #     echo -e "\033[0;31mPlease wait while GitPod executes some finishing touch...... \033[0m"
+  #     gp sync-await setup-user-env
+  #     \. ~/.bashrc
+  #     echo "Enjoy!"
 
 
 vscode: 
