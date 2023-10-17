@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full
 
-RUN apt-get update && \
-    apt-get install -y openjdk-17-jdk && \
-    apt-get install build-essential
+RUN sudo apt-get update && \
+    sudo apt-get install -y openjdk-17-jdk && \
+    sudo apt-get install build-essential
 
