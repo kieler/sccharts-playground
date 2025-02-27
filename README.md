@@ -3,7 +3,7 @@
 Experiment with SCCharts on Github Codespaces or GitPod!
 
 ## :rocket: Quickstart
-The SCCharts playground is based on a Docker image preconfigured with build tools for all our supported target languages. It has a web-based VS Code editor, preloaded with the KIELER VS Code extension, that is accessible through either **GitHub Codespaces** or **GitPod**. Simply click on either of the links below to get started.
+To start an online editor for SCCharts click on one of the buttons below.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=706159122&ref=main&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdev%2Fdevcontainer.json)
 
