@@ -6,4 +6,4 @@ vscode:
     - kieler.keith-vscode
     - kieler.klighd-vscode
 
-workspaceLocation: './examples'
+workspaceLocation: '/workspace/sccharts-playground/examples'
