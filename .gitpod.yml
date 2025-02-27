@@ -1,10 +1,5 @@
 image:
-  file: dockerfiles/gitpod-base.Dockerfile
-
-tasks:
-  - name: Setup Example
-    init: git clone https://github.com/kieler/models.git models --branch master
-    command: exit
+  file: .dockerfiles/gitpod-base.Dockerfile
 
 vscode: 
   extensions:

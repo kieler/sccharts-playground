@@ -1,13 +1,10 @@
 {
     "build": {
-      "dockerfile": "../../dockerfiles/github-codespace.Dockerfile"
+      "dockerfile": ".dockerfiles/github-codespace.Dockerfile"
     },
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
-    "postCreateCommand": {
-      "setup-examples": "git clone https://github.com/kieler/models.git models --branch master" 
-    }, 
-    "workspaceFolder": "/workspaces/sccharts-playground",
+    "workspaceFolder": "/workspaces/sccharts-playground/examples",
     "customizations": {
       "codespaces": {
         "openFiles": []
