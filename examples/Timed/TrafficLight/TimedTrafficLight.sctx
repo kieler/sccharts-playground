@@ -1,0 +1,21 @@
+@DynamicTicks
+@VHLayout
+scchart TimedTrafficLight {
+  input signal pedestrian
+  output signal sigR, sigG, sigY
+  
+  clock x = 0
+  
+  initial state Red 
+    if x >= 60 do sigG; x = 0 go to Green
+  
+  state Green
+    if pedestrian && x < 60 go to Pending
+    if pedestrian && x >= 60 do sigY; x = 0 go to Yellow
+  
+  state Pending
+    immediate if x >= 60 do sigY; x = 0 go to Yellow
+  
+  state Yellow
+    if x >= 5 do sigR; x = 0 go to Red
+}
