@@ -5,3 +5,5 @@ vscode:
   extensions:
     - kieler.keith-vscode
     - kieler.klighd-vscode
+
+workspaceLocation: './examples'
