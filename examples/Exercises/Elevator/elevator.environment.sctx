@@ -1,0 +1,54 @@
+scchart ElevatorInterface {
+  input bool buttonUp, buttonDown, buttonAlarm
+  input bool isUp, isDown, second
+  input bool isOpen, isClosed
+  output bool moveUp, moveDown, alarmLamp
+  output bool openDoors, closeDoors
+}
+
+scchart ElevatorEnvironment extends ElevatorInterface {
+  
+  @PrintFormat "%.2f"
+  // Elevator position in percent between up and down
+  output float _SIM_elevatorPos = 0.0
+  
+  @PrintFormat "%.2f"
+  // Elevator position in percent between up and down
+  output float _SIM_doorPos = 0.0
+  
+  // Elevator movement in percent per tick
+	const float MOVE_SPEED = 0.05
+  const int TICKS_PER_SEC = 5
+  
+  private int tickCounter = 0
+
+  // Elevator positioning
+  immediate during do
+    // Check position (previous tick)
+    isUp = _SIM_elevatorPos >= 1;
+    isDown = _SIM_elevatorPos <= 0;
+    // Move
+    _SIM_elevatorPos += moveUp ? MOVE_SPEED : 0;
+    _SIM_elevatorPos -= moveDown ? MOVE_SPEED : 0;
+    // Limit position
+    _SIM_elevatorPos max= 0;
+    _SIM_elevatorPos min= 1
+    
+  // Door positioning
+  immediate during do
+    // Check position (previous tick)
+    isOpen = _SIM_doorPos >= 1;
+    isClosed = _SIM_doorPos <= 0;
+    // Move
+    _SIM_doorPos += openDoors ? MOVE_SPEED : 0;
+    _SIM_doorPos -= closeDoors ? MOVE_SPEED : 0;
+    // Limit position
+    _SIM_doorPos max= 0;
+    _SIM_doorPos min= 1
+    
+  // Simulated Time
+  immediate during do
+    tickCounter++;
+    second = tickCounter >= TICKS_PER_SEC;
+    tickCounter = second ? 0 : tickCounter
+}

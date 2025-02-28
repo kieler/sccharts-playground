@@ -1,0 +1,6 @@
+import "elevator.environment"
+#visualization "elevator.kviz"
+
+scchart Elevator extends ElevatorEnvironment {
+  // Your code here
+}

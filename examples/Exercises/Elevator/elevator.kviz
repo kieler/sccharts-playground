@@ -1,0 +1,33 @@
+image "elevator.svg"
+
+handle alarmLamp
+in "#signal_alarm"
+with (elem, status)
+'elem.style.fill = status ? "red": "black";'
+
+handle _SIM_elevatorPos
+in "#elevator"
+with (elem, pos)
+'elem.setAttribute("transform", "translate(0, " + (-222 * pos) + ")");'
+
+handle _SIM_doorPos
+in "#door_left"
+with (elem, pos)
+'elem.setAttribute("transform", "translate(" + (-58 * pos) + ", " + (32 * pos) + ")");'
+
+handle _SIM_doorPos
+in "#door_right"
+with (elem, pos)
+'elem.setAttribute("transform", "translate(" + (60 * pos) + ", " + (-36 * pos) + ")");'
+
+event "click"
+on "#button_alarm"
+signal buttonAlarm
+
+event "click"
+on "#button_up"
+signal buttonUp
+
+event "click"
+on "#button_down"
+signal buttonDown
