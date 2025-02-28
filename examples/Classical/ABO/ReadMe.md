@@ -1,0 +1,3 @@
+The ABO program is derived from the well-established ABRO program in synchrnous languages. It illustrates some core principles of the Sequentially Constructive Model of Computation (SC MoC).
+
+For a more detailed insight in the SCCharts ABO model see [SCCharts: Sequentially Constructive Statecharts for Safety-Critical Applications.](https://rtsys.informatik.uni-kiel.de/~biblio/downloads/papers/pldi14.pdf) by R. von Hanxleden, B. Duderstadt, C. Motika, S. Smyth, M. Mendler, J. Aguado, S. Mercer, and O. O’Brien. In Proc. ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI ’14), page 372–383, Edinburgh, UK, June 2014. ACM. 
